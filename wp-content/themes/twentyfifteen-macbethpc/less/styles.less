@@ -1,0 +1,1133 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+// Colours
+@background: #FFF;
+@primary: #4b2077;
+@secondary: #575759;
+@copy: #32373c;
+@anchor: #4b2077;
+@lightGray: #dddddd;
+@subtleGray: #eeeeee;
+
+// Text 
+@base-font-size: 13px;
+@base-line-height: 22px;
+
+// Widths
+@wrapper-width-large: 1020px;
+@global-spacing: 20px;
+@left-column-width: 640px;
+
+// Sizes
+@zero: 0;
+
+// Margins
+.margin-bottom-regular {
+	margin-bottom: @global-spacing;
+}
+
+// Padding
+
+
+// Baselines
+body {
+	background-color: @background;
+	color: @copy;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	font-size: @base-font-size;
+	line-height: @base-line-height;
+}
+body:before {
+	content: none;
+}
+
+.wrapper {
+	overflow: auto;
+	padding-left: @global-spacing;
+	padding-right: @global-spacing;
+}
+.wrapper a {
+	text-decoration: none;
+	color: @primary;
+}
+.wrapper a:hover {
+	text-decoration: underline;
+	color: @primary;
+}
+.wrapper a:focus {
+	color: @primary;
+}
+
+.headerWrap {
+	max-width: @wrapper-width-large;
+	border-bottom: 1px solid @subtleGray;
+}
+
+// Margins
+.margin-bottom-regular {
+	margin-bottom: @global-spacing;
+}
+
+// Padding
+.padding-left-zero {
+	padding-left:0;
+}
+
+// Header Area
+
+
+// Menu
+.menu {
+	padding: @global-spacing @global-spacing 10px @global-spacing;
+	background: @secondary;
+}
+.menu ul li a {
+	color: @background;
+	font-size: @base-font-size;
+}
+
+// Forms
+form[name="quickContact"] {
+	overflow: auto;
+	margin-bottom: @global-spacing;
+
+	input, textarea {
+		border: 1px solid @secondary;
+	}
+	input[name="send"] {
+		border: none;
+		background: @primary;
+		color: @background;
+
+	}
+}
+// single level selectors
+a {
+	color: @primary;
+}
+a:hover {
+	color: @primary;
+}
+p {
+	margin-bottom: @global-spacing / 2;
+}
+
+ul ul li a {
+	color: @primary;
+}
+.clear {
+	clear: both;
+}
+ol, ul {
+	list-style: square;
+	margin-left: @global-spacing;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+span {
+	color: @primary;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Plugins
+
+// Contact form 7
+#wpcf7-f50-o1 p {
+	margin-bottom: 0;
+}
+
+input[type="text"], input[type="email"], textarea {
+	color: #333;
+	padding: 0.5rem;
+	border: 1px solid @lightGray;
+	width: 100%;
+	font-size: @base-font-size;
+	line-height: @base-line-height;	
+}
+
+textarea {
+	height: 150px;
+}
+
+input[type="submit"] {
+	border: none;
+	padding: 0.5rem;
+	font-size: @base-font-size;
+	line-height: @base-line-height;	
+}
+input[type="submit"]:hover {
+	background: @primary;
+}
+
+
+
+.screen-reader-response {
+	display: none;
+}
+
+span[role="alert"] {
+	color: red;
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+	background-color: green;
+	padding: 0.5rem;
+	margin-top: 1rem;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+	display: none;
+}
+
+// Propery sidebar
+.property-sidebar {
+	width: 320px;
+	float: left;
+}
+
+// Property Custom Post Type
+	.property-vitals {
+		width: @left-column-width;
+		float: left;
+		margin-right: @global-spacing * 2;
+	}
+	.property-vitals h1 {
+		float: left;
+	}
+	.property-vitals h3 {
+		margin-bottom: @global-spacing / 2;
+		font-size: @base-font-size;
+	}
+	.property-vitals-price {
+		float: right;
+	}
+
+	.property-specifics {
+		width: 100%;
+		margin-bottom: @global-spacing / 2;
+		padding: @global-spacing / 2;
+		background: @subtleGray;
+
+		p {
+			margin-bottom: @zero;
+
+			span {
+				color: @copy;
+				font-weight: bold;
+			}
+		}
+	}
+	.property-filter {
+		padding: @global-spacing / 2;
+		background: @subtleGray;
+
+		p {
+			margin-bottom: @zero;
+
+			span {
+				color: @copy;
+				font-weight: bold;
+			}
+		}
+	}
+	.property-content {
+		width: @left-column-width;
+		clear: both;
+		float: left;
+		margin-right: @global-spacing;
+	}
+	.property-contact-form {
+		width: @left-column-width;
+	}
+
+
+// Pop up modal 
+.gm-style .gm-style-iw {
+	padding: 5px;
+	color: @secondary;
+}
+
+// google map
+#map-canvas #content {
+	color: #333;
+}
+#map-canvas #content ul {
+	line-height: 25px;
+	font-size: 15px;
+	list-style: none;
+	margin-left: @zero;	
+}
+#map-canvas #content #title {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+// Google map
+#map-canvas {
+	margin-bottom: @global-spacing;
+	height: 250px;
+	width: 100%;
+}
+
+// contact us page
+.left-column {
+	width: 100%;
+}
+.right-column {
+	width: 100%;
+}
+
+.wrapper hr {
+	margin-top: 0;
+	padding-bottom: 0;
+	border-color: @primary!important;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+	color: @primary;
+	margin-bottom: @global-spacing / 2;
+}
+
+h1, h2, h3 {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h1 span {
+	color: @primary;
+	clear: both;
+}
+// span on clients pages
+h1 span.white {
+	color: @background;
+}
+
+// Property Custom Post Type
+.archive-property-overview {
+	padding-top: @global-spacing / 2;
+	padding-bottom: @global-spacing / 2;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.inline {
+	float: left;
+	margin-right: 2rem;
+}
+
+div.single {
+	padding-top: 1.5rem;
+}
+
+html {
+	width: 100%;
+}
+
+// NextGen Gallery - using important styles because this is loaded after my stylesheet
+.ngg-gallery-thumbnail {
+	margin-bottom: 1rem;
+	width: 100%;
+}
+.ngg-gallery-thumbnail-box {
+	/*margin-right: 0.5rem!important;
+	margin-bottom: 0.5rem!important;*/
+	width: 100%;
+}
+.ngg-gallery-thumbnail img {
+	padding: 0!important;
+	width: 100%;
+	border: 1px solid #444!important;
+}
+
+// Contact form
+#wpcf7-f50-o1 {
+	width: 100%;
+	margin-bottom: 1rem;
+
+	input[type="submit"] {
+		background-color: @primary;
+		border: none;
+		padding: 0.5rem;
+	}
+
+	#message {
+		width: 100%;
+	}
+
+	.screen-reader-response {
+		position: absolute;
+	    top: -9999px;
+	    left: -9999px;
+	}
+}
+
+.anchor {
+	border: 5px solid @anchor;
+	float: left;
+	margin-right: 1em;
+}
+
+// News
+.news-thumb img {
+	margin-right: 2rem;
+}
+
+.newsItem {
+	margin-bottom: 1.5em;
+}
+
+.more-link {
+	display: block;
+	color: @primary;
+	margin-top: 0.5rem;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+// Bootstrap navigation
+.navbar-header {
+	min-height: 85px;
+	margin-bottom: @global-spacing / 2;
+	overflow: auto;
+}
+
+.navbar-nav > li > a {
+	padding: 0;
+	line-height: 30px;
+	font-weight: 600;
+}
+
+.navbar-default {
+	background-color: @background;
+	border: none;
+
+	.navbar-brand {
+		padding: 0;
+	}
+
+	.navbar-brand > img {
+		position: relative;
+		top: @global-spacing;
+		left: @global-spacing;
+	}
+
+	.navbar-toggle {
+		background-color: @primary!important;
+		border: none;
+		position: absolute;
+		top: 0.75rem;
+		right: 1rem;
+		margin-right: 0;
+		border-radius: 0;
+	}
+
+	button[aria-expanded="true"] {
+		background-color: @primary!important;
+	}
+
+	button[aria-expanded="true"].navbar-toggle .icon-bar {
+		background-color: @background;
+	}
+
+	.navbar-toggle .icon-bar {
+		background-color: @background;
+	}
+
+	.navbar-toggle .icon-bar+.icon-bar {
+		margin-top: 5px;
+		background-color: @background;
+	}
+
+	.navbar-nav {
+		  margin: 0;
+	}
+
+	.navbar-nav li {
+		padding: 0;
+	}
+
+	.navbar-nav .open .dropdown-menu .dropdown-header,
+	.navbar-nav .open .dropdown-menu > li > a {
+		padding: 10px 0;
+		font-size: 1.1rem;
+		color: @primary;
+	}
+
+	.navbar-nav .open .dropdown-menu li {margin: 0; padding: 0;}
+	.navbar-nav .open .dropdown-menu li a:hover {color: #fff;}
+	.navbar-nav .open .dropdown-menu ul li:last-child {border-bottom: none;}
+
+	.navbar-nav li a {
+		text-transform: uppercase;
+		color: @background;
+	}
+
+	.navbar-nav li a {
+		color: @primary;
+	}
+
+}
+
+.navbar-collapse {
+	border: none;
+	-webkit-box-shadow: none;
+  	box-shadow: none;
+}
+
+// When mobile nav is expanded
+.navbar-collapse[aria-expanded="true"] {
+	margin-bottom: @global-spacing;
+  	background-color: @primary;
+}
+.home .navbar-collapse[aria-expanded="true"] {
+	margin-bottom: @zero;
+}
+.navbar-collapse .navbar-nav li a {
+	color: @background;
+}
+
+.navbar-collapse {
+	clear: both;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	color: @background;
+}
+
+.dropdown-menu {
+	padding: 0;
+}
+
+.container-fluid {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container-fluid > .navbar-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.container-fluid > .navbar-collapse {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+// services page
+.serviceBlock img {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.serviceBlock {
+	margin-bottom: 1.5rem;
+}
+
+.headerWrap {
+	overflow: auto;
+}
+
+
+.headerBrand {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.headerTel {
+	display: none;
+	position: absolute;
+	top: @global-spacing;
+	right: @global-spacing;
+	padding-top: @global-spacing;
+	span {
+		color: green;
+	}
+}
+.headerWrap {
+	margin-top: @global-spacing;
+	margin: 0 auto;
+	margin-bottom: @global-spacing;
+}
+.home .headerWrap {
+	margin-bottom: @zero;
+}
+.page-contact-us .headerWrap {
+	margin-bottom: @zero;
+}
+.wrapper {
+	margin-top: @global-spacing;
+	margin: 0 auto;
+}
+
+
+.container-fluid {
+	margin: 0 auto;
+}
+
+#subnav {
+	float: left;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid @primary;
+
+	ul {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: #FFFFFF;
+	}
+
+	h2 {
+		margin-bottom: 0.5rem;
+		line-height: 1rem;
+	}
+}
+
+// Homepage Banner
+.homeSlider {
+	overflow: hidden;
+	background: @subtleGray;
+}
+.master-slider-parent {
+	width: @left-column-width;
+	margin-bottom: @global-spacing;
+
+}
+.home .master-slider-parent {
+	margin-bottom: @zero;
+	width: 1020px;
+}
+.property-content .master-slider-parent {
+
+}
+
+.ms-thumb-frame, .ms-thumb-frame-selected {
+	margin-right: 0!important;
+}
+
+
+// homepage columns
+.column1 {
+	margin-bottom: 1rem;
+	margin-top: @global-spacing;
+
+	div {
+		span {
+			background: gray;
+			padding: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+
+			a, a:link, a:visited, a:hover, a:active {
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.column2 {
+	margin-bottom: 1rem;
+	margin-top: @global-spacing;				
+}
+
+// sidebars
+.sidebar {
+	float: left;
+	margin-bottom: 2rem;
+	padding: @global-spacing;
+	width: 100%;	
+	background-color: #292929;
+}
+.sidebar .left {
+	margin-right: 0;
+}
+.sidebar .right {
+	margin-right: 0;
+}
+
+// Main inside page container
+.page-article {
+	clear: both;
+	overflow: auto;
+	margin-bottom: 1rem;
+	padding: 0 1rem;
+	width: 100%;
+}
+.page-article.left {
+	float: left;
+	width: 100%;
+}
+
+.page-article img {
+	margin-bottom: 1rem;
+	max-width: 673px;
+}
+
+// post images used for news articles
+.attachment-post-thumbnail {
+
+}
+
+
+
+// half width of article for desktop view (created on 404 page)
+.page-article .half-desktop {
+	width: 50%;
+}
+.half-desktop #contactForm {
+	margin-bottom: 1rem;
+}
+
+// Porfolio pages
+	#mainImage {
+		border: 10px solid @secondary;
+		max-width: 100%;
+	}
+
+	#thumbs {
+		margin-top: 1rem;
+	}
+
+	#thumbs .thumb {
+		border: 1px solid @secondary;
+		max-width: 100%;
+		margin-bottom: 0.5rem;
+		}
+
+.footer {
+	margin-top: @global-spacing;
+	padding-top: @global-spacing;
+	padding-bottom: @global-spacing;
+	clear: both;
+	overflow: auto;
+	color: @background;
+	background: @primary;
+
+	a {
+		color: @background;
+	}
+	a:hover {
+		color: @background;
+		text-transform: underline;
+	}
+
+	.left {
+		float: left;
+	}
+
+	p {
+		margin-bottom: @global-spacing / 4;
+	}
+
+	.right {
+		float: right;
+		text-align: right;
+	}
+}
+
+// Portfolio client lists
+.client-list ul li {
+	width: 100%;
+}
+.flush-right {
+	margin-right: 0;
+}
+
+
+
+// Portfolio page ------ these styles don't work
+.client-pager {
+	overflow: auto;
+	width: 100%;
+	font-size: 22px;
+	margin-bottom: 1rem;
+}
+.client-pager div {
+	width: 50%;
+}
+.previous {
+	float: left;
+	left: 0;
+}
+.next {
+	float: right;
+	text-align: right;
+}
+
+
+
+// Homepage news items
+.home-news-thumb {
+	float: left;
+	margin-right: 1rem;
+}
+.home-news-item span {
+	display: block;
+	font-size: 19px;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+.home-news-text {
+	margin-bottom: @global-spacing / 2;
+
+	h3 {
+		clear: none;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+}
+.all-news {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+// News page news items
+.news-thumb {
+	float: left;
+}
+.news-text {
+	line-height: 25px;
+}
+span.title {
+	display: block;
+	font-size: 20px;
+}
+
+
+// overrrides
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-default .navbar-nav {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 567px) {
+	// for grid on client category pages (2 column)
+	
+	// Client pages
+	.client-list ul li {
+		float: left;
+		margin-right: 6%;
+		width: 47%;
+	}
+	.client-list ul li.second {
+		margin-right: 0;
+	}
+	.client-list ul li img {
+		width: 100%;
+	}
+}
+
+// When called for
+@media only screen and (max-width: 720px) {
+	.footer .right {
+		clear: both;
+		float: left;
+		text-align: left;
+	}
+	.navbar-nav .open .dropdown-menu > li > a {
+		padding-left: 15px;
+	}
+}
+
+// After mobile nav (Nav open)
+@media only screen and (min-width: 767px) {
+
+	.menu {
+		padding: 10px @global-spacing @global-spacing @global-spacing;
+	}
+	.menu li {
+		float: left;
+		padding-right: @global-spacing;
+	}
+
+	.logo {
+		position: relative;
+		top: -115px;
+		background: @background;
+		padding: @global-spacing;
+		max-width: 400px;
+	}
+
+	.headerTel {
+		display: block;
+	}
+
+	// Forms
+	form[name="quickContact"] {
+		margin-bottom: @global-spacing;
+
+		input {
+			width: 30%;
+			margin-right: 3%;
+			float: left;
+		}
+		textarea {
+			width: 100%;
+		}
+	}
+
+	.page-article.left {
+		width: 66%;
+		margin-right: 2rem;
+	}
+
+	// sidebars
+	.sidebar {
+		float: left;
+		width: 30%;
+	}
+	.sidebar .left {
+		margin-right: 2rem;
+	}
+	.sidebar .right {
+		margin-right: 0;
+	}
+
+
+	.home hr {
+		display: none;
+	}
+
+	#subnav ul {
+		float: left;
+		margin-right: 2rem;
+	}
+
+	.navbar-default .navbar-nav {
+		padding-top: @zero;
+	}
+
+	.navbar > .container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+
+	.navbar-nav > li > a {
+		color: @primary;
+		padding: 0;
+		line-height: @base-line-height;
+		padding-right: @global-spacing / 2;
+		margin-right: @global-spacing / 2;
+	}
+	.navbar-nav > li:first-child a {
+		padding-left: 0;
+	}
+
+	.navbar-nav a {
+		color: @primary;
+	}
+
+	.navbar-default .nav .open > a,
+	.navbar-default .nav .open > a:focus,
+	.navbar-default .nav .open > a:hover {
+		background-color: @background;
+	}
+
+	.navbar-collapse {
+		padding-left: @global-spacing;
+		padding-right: @global-spacing;
+	}
+	.navbar-collapse .navbar-nav li a,
+	.navbar-collapse .navbar-nav li a:link,
+	.navbar-collapse .navbar-nav li a:visited,
+	.navbar-collapse .navbar-nav li a:hover,
+	.navbar-collapse .navbar-nav li a:active {
+		color: @secondary;
+		outline: 0;
+	}
+
+	.navbar-nav .open .dropdown-menu li {
+		border-bottom: 1px solid #636363;
+	}
+
+	.headerWrap {
+		width: 100%;
+	}
+
+	.dropdown-menu {
+		top: 50px;
+		-webkit-box-shadow: none;
+		-box-shadow: none;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.dropdown-menu>li>a:hover {
+		background-color: #3e3d3d;
+	}
+
+	// Portfolio subnav
+	#subnav {
+		a {
+			color: #FFFFFF;
+		}
+		.column {
+			float:left;
+			width: 30%;
+		}
+		.column ul {
+			float: left;
+			width: auto;
+		}
+		
+	}
+
+	// home news section
+	.home-news-item {
+		float: left;
+		width: 45%;
+		margin-right: 2rem;
+	}
+
+	//client single pages
+	.single-client .ngg-gallery-thumbnail-box {
+		width: 30%;
+		float: left;
+		margin-right: 5%;
+	}
+	.single-client .ngg-gallery-thumbnail-box.third {
+		margin-right: 0;
+	}
+
+	// Contact page details
+	#contact {
+		float: left;
+		width: 30%;
+	}
+
+	// Contact form 7
+	#wpcf7-f50-o1 textarea {
+		height: 150px;
+	}
+
+	// archive property page
+	.archive-property-item {
+		max-width: @wrapper-width-large;
+		margin-bottom: @global-spacing;
+		overflow: auto;
+		clear: both;
+	}	
+	.archive-property-thumbnail {
+		float: left;
+		margin-right: @global-spacing;
+	}	
+	.archive-property-overview {
+		width: 50%;
+		float: left;
+		padding-top: @zero;
+	}
+
+	.property-sidebar {
+		width: 360px;
+	}
+}
+
+// Desktop
+@media only screen and (min-width: 992px) {
+
+	.wrapper {
+		max-width: @wrapper-width-large;
+	}
+
+	.navbar-collapse {
+		padding-left: @zero;
+		padding-right: @zero;
+	}
+	.navbar-collapse .navbar-nav li a {
+		font-size: @base-font-size;
+	}
+	.navbar-nav {
+		padding-left: @global-spacing;
+	}
+
+	.headerTel {
+		right: 0;
+	}
+
+	// homepage
+	.column1 {
+		float: left;
+		width: 60%;
+		margin-right: 5%;
+	}
+	.column2 {
+		float: left;
+		width: 35%;
+	}
+
+	.home-news-item {
+		width: 100%;
+	}
+}
+
+// Wide desktop
+@media only screen and (min-width: 1080px) {
+	.wrapper {
+		overflow: auto;
+		padding-left: @zero;
+		padding-right: @zero;
+	}
+	.navbar-default .navbar-brand > img {
+		left: @zero;
+	}
+	.navbar-nav {
+		padding-left: @zero;
+	}
+}
