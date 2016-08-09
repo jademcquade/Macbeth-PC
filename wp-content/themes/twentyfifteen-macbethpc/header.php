@@ -9,10 +9,9 @@
 <title><?php wp_title(); ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" href="http://localhost:9999/geo-site/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="http://" . <?php $host ?> . "/geo-site/apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAo-_L9MctRmuLwkHHVtgtdFkYkdgUX-I"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -55,15 +54,29 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-              <li><a href="http://localhost:9999/macbethpc/investment/">INVESTEMENT <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/development/">DEVELOPMENT <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/asset-management/">ASSET MANAGEMENT <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/sales-purchase/">Sales &amp; PURCHASE <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/client-representation/">CLIENT REPRESENTATION <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/property/">PROPERTIES <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:9999/macbethpc/contact-us/">CONTACT US <span class="sr-only">(current)</span></a></li>
-            </ul>
+        <ul class="nav navbar-nav">
+        <li>
+          <a href="<?php echo site_url(); ?>/investment/">INVESTEMENT <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/development">DEVELOPMENT <span class='sr-only'>(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/asset-management/">ASSET MANAGEMENT <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/sales-purchase/">Sales &amp; PURCHASE <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/client-representation/">CLIENT REPRESENTATION <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/property/">PROPERTIES <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="<?php echo site_url(); ?>/contact-us/">CONTACT US <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
